@@ -20,7 +20,8 @@ fonts-noto-color-emoji
 pipewire
 wireplumber
 pavucontrol
-policykit-1
+polkitd
+pkexec
 udisks2
 dosfstools
 ntfs-3g
@@ -38,3 +39,6 @@ lshw
 firmware-linux
 firmware-misc-nonfree
 firmware-amd-graphics
+libreoffice-writer
+libreoffice-calc
+libreoffice-impress
