@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=TallyPrime (Download / Windows)
+Comment=Open the official TallyPrime download page; desktop TallyPrime requires Windows
+Exec=firefox-esr --new-window https://tallysolutions.com/download/
+Icon=applications-office
+Terminal=false
+Categories=Office;Finance;
