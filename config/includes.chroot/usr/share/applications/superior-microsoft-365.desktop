@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=Microsoft 365 (Web)
-Comment=Open Microsoft 365 online apps in your browser
-Exec=firefox-esr --new-window https://www.microsoft365.com/
-Icon=applications-office
-Terminal=false
-Categories=Office;Network;
