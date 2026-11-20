@@ -34,7 +34,7 @@ Clone and build:
 ```bash
 git clone https://github.com/Ajking420/SUPIRIOR-OS.git
 cd SUPIRIOR-OS
-sudo ./build/build-iso.sh
+sudo bash build/build-iso.sh
 ```
 
 The generated ISO and SHA256 checksum will be in `out/`.
