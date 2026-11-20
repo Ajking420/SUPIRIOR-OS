@@ -9,10 +9,11 @@ SUPERIOR OS does not bundle proprietary Windows installers or licences. Microsof
 are no official native Linux desktop clients for these products.
 
 For users who need the genuine desktop applications, SUPERIOR OS supports an
-optional Windows virtual machine (VM). Install the VM host components with:
+optional Windows virtual machine (VM). The setup helper is included in the
+installed system. Run:
 
 ```bash
-sudo bash build/install-windows-vm-support.sh
+sudo bash /usr/lib/superior-os/install-windows-vm-support.sh
 ```
 
 Then sign out and back in, open **Windows Virtual Machine** (Virtual Machine
