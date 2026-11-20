@@ -19,11 +19,11 @@
 
 ## Optional Windows VM
 The Core ISO stays lean. Users opt in after installation by running
-`sudo bash build/install-windows-vm-support.sh`. This installs QEMU/KVM,
-libvirt, virt-manager, UEFI firmware and virtual TPM support. The host CPU must
-expose AMD-V/SVM or Intel VT-x. Windows 11 guests should use UEFI and TPM 2.0.
-Shared host folders should be explicitly configured, preferably with VirtioFS
-or a restricted SMB share.
+`sudo bash /usr/lib/superior-os/install-windows-vm-support.sh`. This installs
+QEMU/KVM, libvirt, virt-manager, UEFI firmware and virtual TPM support. The host
+CPU must expose AMD-V/SVM or Intel VT-x. Windows 11 guests should use UEFI and
+TPM 2.0. Shared host folders should be explicitly configured, preferably with
+VirtioFS or a restricted SMB share.
 
 ## Editions
 - Core: lightweight desktop; virtualization, Android, containers and gaming runtimes optional.
