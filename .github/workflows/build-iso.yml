@@ -1,0 +1,42 @@
+name: Build SUPERIOR OS Core ISO
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'config/**'
+      - 'build/**'
+      - '.github/workflows/build-iso.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Build inside Debian Trixie
+        run: |
+          docker run --privileged --rm \
+            -v "${GITHUB_WORKSPACE}:/work" \
+            -w /work \
+            debian:trixie \
+            bash -lc '
+              apt-get update &&
+              DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+                ca-certificates live-build debootstrap squashfs-tools xorriso \
+                grub-pc-bin grub-efi-amd64-bin mtools dosfstools &&
+              bash build/build-iso.sh
+            '
+
+      - name: Upload ISO and checksum
+        uses: actions/upload-artifact@v4
+        with:
+          name: superior-os-core-iso
+          path: out/*
+          if-no-files-found: error
+          retention-days: 14
