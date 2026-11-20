@@ -39,6 +39,21 @@ sudo bash build/build-iso.sh
 
 The generated ISO and SHA256 checksum will be in `out/`.
 
+## Optional Windows VM support
+
+The lightweight Core ISO does not install virtualization services by default.
+On an installed SUPERIOR OS system, run:
+
+```bash
+sudo bash build/install-windows-vm-support.sh
+```
+
+After signing out and back in, open **Windows Virtual Machine** from the
+Applications menu. Supply your own licensed Windows ISO and product licence.
+You can then install genuine Microsoft 365 desktop apps and Google Drive for
+desktop inside Windows. See [docs/office-applications.md](docs/office-applications.md)
+for setup, shared-folder and hardware guidance.
+
 ## Test safely
 
 Test the ISO in QEMU or VirtualBox before installing it on physical hardware.
@@ -47,7 +62,7 @@ Writing an ISO to a USB drive erases the selected drive.
 ## Architecture and safety policy
 
 - Debian Stable base, AMD64 first.
-- Core edition keeps Android, containers and gaming runtimes optional.
+- Core edition keeps virtualization, Android, containers and gaming runtimes optional.
 - Wine/Proton support many, but not all, Windows applications.
 - Ubuntu, Arch and Kali environments are isolated using containers; do not mix
   their package managers into the host root filesystem.
