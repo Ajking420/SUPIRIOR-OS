@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Windows Virtual Machine
+Comment=Create and manage an optional Windows virtual machine
+TryExec=virt-manager
+Exec=virt-manager
+Icon=virt-manager
+Terminal=false
+Categories=System;Emulator;
