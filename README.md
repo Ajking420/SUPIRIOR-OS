@@ -45,7 +45,7 @@ The lightweight Core ISO does not install virtualization services by default.
 On an installed SUPERIOR OS system, run:
 
 ```bash
-sudo bash build/install-windows-vm-support.sh
+sudo bash /usr/lib/superior-os/install-windows-vm-support.sh
 ```
 
 After signing out and back in, open **Windows Virtual Machine** from the
