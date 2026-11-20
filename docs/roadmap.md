@@ -12,3 +12,5 @@
 - [ ] M9: Steam/Proton gaming profile
 - [ ] M10: Waydroid integration and Android 17 compatibility investigation
 - [ ] M11: 2 GB Core edition performance testing
+- [x] M12: optional KVM/QEMU + virt-manager Windows VM setup helper
+- [ ] M13: test Windows 11 VM creation, TPM 2.0, VirtIO drivers and shared folders
